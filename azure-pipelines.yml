@@ -8,10 +8,14 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  
+variables:
+- group: my-variable-group
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- script: echo ${Mrutunjay}
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
