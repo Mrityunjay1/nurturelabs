@@ -18,7 +18,7 @@ steps:
 - script: echo $(Demo)
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- script: echo ${my-passed-variable}
+- script: echo $(my-passed-variable)
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
