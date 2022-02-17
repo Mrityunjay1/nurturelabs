@@ -33,7 +33,7 @@ const Dashboard = () => {
             <img src={bitcoin} alt="bitcoin" />
           </div>
 
-          <p className="div-inside-two-p">Tutorial</p>
+          <p className="div-inside-two-p" style={{fontWeight:'500',fontSize:'15px',fontFamily:'Inter'}}>Tutorial</p>
         </div>
         <div className="div-inside-three">
           <div>
