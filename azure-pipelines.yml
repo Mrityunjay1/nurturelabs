@@ -12,10 +12,10 @@ pool:
 variables:
 - group: my-variable-group
 - name: my-passed-vaiable
-  value: ${variables.Mrutunjay}
+  value: ${variables.Demo}
 
 steps:
-- script: echo $(Mrutunjay)
+- script: echo $(Demo)
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 - script: echo ${my-passed-variable}
