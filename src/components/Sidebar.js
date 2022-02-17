@@ -75,7 +75,7 @@ const Sidebar = ({children}) => {
                     )
                 })}
             </section>
-            <div style={{display:'flex',justifyContent:'space-evenly',marginRight:'10px'}}>
+            {open &&<div style={{display:'flex',justifyContent:'space-evenly',marginRight:'10px'}}>
                 <button style={{display:'flex', justifyContent:'space-around',alignItems:'center',width:'90px',height:'35px',background:'#353945',borderRadius:'10px'}}>
                     <FaApple style={{fontSize:'15px',background:'#3772FF',borderRadius:'25px',color:'white',margin:'10px'}} />
                     <p style={{color:'white',fontSize:'14px',paddingRight:'5px',fontFamily:'Inter',fontWeight:'600'}}>$0.90</p>
@@ -83,7 +83,7 @@ const Sidebar = ({children}) => {
                 <button style={{display:'flex', justifyContent:'space-around',alignItems:'center',width:'90px',height:'35px',background:'#A3E3FF',borderRadius:'10px',boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                     <p style={{fontSize:'14px',paddingRight:'5px',color:'#3772FF',fontFamily:'Inter',fontWeight:'600'}}>Buy $XYZ</p>
                 </button>
-            </div>
+            </div>}
             
         </motion.div>
             <main style={{flex : '1'}}>
