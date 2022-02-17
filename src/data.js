@@ -14,8 +14,8 @@ export const data= [
     },
     {
         "img" : "https://raw.githubusercontent.com/akshita151199/APIs/main/btc.png",
-        "amount": 0.001,
-        "asset": "Bitcoin",
+        "amount": 0.002,
+        "asset": "Ethereum",
         "chain":{
             "img" : "https://raw.githubusercontent.com/akshita151199/APIs/main/avax.png",
             "name" : "AVAX"
