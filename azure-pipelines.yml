@@ -12,7 +12,7 @@ pool:
 variables:
 - group: Mrutunjay
 - name: my-passed-variable
-  value: ${variables.Demo}
+  value: $(variables.Demo)
 
 steps:
 - script: echo $(Demo)
