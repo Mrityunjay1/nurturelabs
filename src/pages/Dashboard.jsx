@@ -16,7 +16,8 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <div className="div-one">
         <div className="div-one-container">
-          <h3>Section</h3>
+          <h3>Section <hr/></h3>
+          
           <div className="div-one-inside">
             <FaMoneyBill className="bill-icon" />
             <p>0.2 $XYZ</p>
