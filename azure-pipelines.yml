@@ -10,10 +10,12 @@ pool:
   vmImage: ubuntu-latest
   
 variables:
-- name: my-passed-vaiable
+- group: Mrutunjay
+- name: my-passed-variable
   value: ${variables.Demo}
 
 steps:
+- script: echo $(Demo)
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 - script: echo ${my-passed-variable}
