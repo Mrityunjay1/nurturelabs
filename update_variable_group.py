@@ -36,7 +36,7 @@ payload = json.dumps({
     "name": stage1_variable_group,
     "variables": {
         stage1_variable_group+'-'+service_name: {
-            "value": str(Build.BuildId)
+            "value": "nothing"
         }
     }
 })
