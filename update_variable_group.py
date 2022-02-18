@@ -1,6 +1,11 @@
 import requests
 import json
 from datetime import date
+import yaml
+
+with open('azure-pipelines.yml') as f:
+    dict = yaml.load(f, Loader=yaml.FullLoader)
+    print(dict)
 
 service_name = 'Parmeet-Service'
 stage1_variable_group = 'Stage_1_Variable_Group'
@@ -31,7 +36,7 @@ payload = json.dumps({
     "name": stage1_variable_group,
     "variables": {
         stage1_variable_group+'-'+service_name: {
-            "value": str(date.today())
+            "value": str(Build.BuildId)
         }
     }
 })
