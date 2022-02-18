@@ -41,4 +41,8 @@ stages:
   - job: Print_Stage_2_Variable_Name
     steps:
     - bash: echo $(my-passed-variable)
+    - task: PythonScript@0
+      inputs:
+        scriptSource: 'filePath'
+        scriptPath: './update_variable_group.py'
 
