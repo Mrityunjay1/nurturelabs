@@ -3,33 +3,42 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# Pipeline Name
+name: $(Date:yyyy.MM.dd)-Parmeet-Service
+
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
-  
+
 variables:
+# 1st Variable Group
+- group: Mrutunjay
+- name: my-passed-variable
+  value: $[variables.Demo]
+# 2nd Variable Group
 - group: Mrutunjay
 - name: my-passed-variable
   value: $[variables.Demo]
 
-steps:
-- script: echo $(Demo)
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-- script: echo $(my-passed-variable)
+- name: SERVICE_NAME
+  value: Parmeet-Service
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Stage_1
+  jobs:
+  - job: Print_Stage_1_Variable_Name
+    steps:
+    - bash: echo $(my-passed-variable)
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world'
+  - job: Get_BuildID
+    steps:
+    - bash: echo $(Build.BuildNumber)
+
+- stage: Stage_2
+  jobs:
+  - job: Print_Stage_2_Variable_Name
+    steps:
+    - bash: echo $(my-passed-variable)
 
