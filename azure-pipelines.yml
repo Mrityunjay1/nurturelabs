@@ -23,7 +23,7 @@ variables:
   value: $[variables.Demo]
 
 - name: SERVICE_NAME
-  value: Parmeet-Service
+  value: ADO-Service
 
 stages:
 - stage: Stage_1
@@ -34,7 +34,7 @@ stages:
 
   - job: Get_BuildID
     steps:
-    - bash: echo $(Build.BuildNumber)
+    - bash: echo $(Build.SERVICE_NAME)
 
 - stage: Stage_2
   jobs:
