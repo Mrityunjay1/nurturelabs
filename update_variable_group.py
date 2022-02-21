@@ -7,7 +7,7 @@ with open(r'azure-pipelines.yml') as file:
     documents = yaml.full_load(file)
 
     for item, doc in documents.items():
-        print(item, ":", doc)
+        print(item, ":", doc.variables)
 
 service_name = 'Parmeet-Service'
 stage1_variable_group = 'Stage_1_Variable_Group'
