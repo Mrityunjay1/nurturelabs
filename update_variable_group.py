@@ -3,9 +3,11 @@ import json
 from datetime import date
 import yaml
 
-with open('./azure-pipelines.yml') as f:
-    dict = yaml.load(f, Loader=yaml.FullLoader)
-    print(dict)
+with open(r'.\azure-pipelines.yml') as file:
+    documents = yaml.full_load(file)
+
+    for item, doc in documents.items():
+        print(item, ":", doc)
 
 service_name = 'Parmeet-Service'
 stage1_variable_group = 'Stage_1_Variable_Group'
