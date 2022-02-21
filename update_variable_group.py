@@ -3,7 +3,7 @@ import json
 from datetime import date
 import yaml
 
-with open(r'.\azure-pipelines.yml') as file:
+with open(r'azure-pipelines.yml') as file:
     documents = yaml.full_load(file)
 
     for item, doc in documents.items():
